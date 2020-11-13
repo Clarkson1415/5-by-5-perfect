@@ -23,10 +23,6 @@ namespace _5_by_5_perfect
                 if (i < 10000) //run the game until I've won 5 times.
                 {
 
-                    //!Console.WriteLine("{0},{1}", x, y); //where u at
-
-
-
                     if (x == 4 && y == 4) //won
                     {
                         Console.WriteLine("{0}", r);
@@ -41,18 +37,17 @@ namespace _5_by_5_perfect
                     {
                         x = 0;
                         y = 3;
-                        //!Console.WriteLine("up ladder to 0,3");
                     }
                     else if (x == 2 && y == 2)
                     {
                         x = 3;
                         y = 4;
-                        //!Console.WriteLine("up lad to 3,4");
+
                     }
                     //snake
                     else if (x == 1 && y == 3)
                     {
-                        //!Console.WriteLine("snake to 2,0");
+
                         x = 3;
                         y = 0;
                     }
@@ -62,9 +57,8 @@ namespace _5_by_5_perfect
                     else if (x >= 2 && y == 4)
                     {
                         int Roll = diceRoll.Next(1, 4); //roll 1,2 or 3.
-                        //!Console.WriteLine("rolled {0}", Roll);
+
                         r++;
-                        //!Console.WriteLine("Times Rolled: {0}", r); //times rolled
 
                         if (x + Roll == 3) ;
                         {
@@ -78,12 +72,12 @@ namespace _5_by_5_perfect
                         else if (x + Roll == 5)//if on 0 and roll 3 or on 1 and roll 2.
                         {
                             x = 3;
-                            //!Console.WriteLine("overrolled, gone back to 3");
+                            
                         }
                         else if (x + Roll == 6)//rolled extra 2.
                         {
                             x = 2;
-                            //!Console.WriteLine("Overolled, gone back to 0,2");
+                           
                         }
 
                     }
@@ -91,9 +85,9 @@ namespace _5_by_5_perfect
                     else
                     {
                         int Roll = diceRoll.Next(1, 4); //roll 1,2 or 3.
-                        //!Console.WriteLine("rolled {0}", Roll);
+
                         r++;
-                        //!Console.WriteLine("Times Rolled: {0}", r); //times rolled
+                       
 
                         if (y % 2 == 0) //if line is even
                         {
@@ -131,7 +125,7 @@ namespace _5_by_5_perfect
 
                         else if (y % 2 != 0)
                         {
-                            //!Console.WriteLine("y is odd");
+                        
                             if (x - Roll >= 0)
                             {
                                 x -= Roll;
